@@ -3,9 +3,9 @@ import cartBooksImg from './img/shopping-cart-books-transparent.png'; //para el 
 
 const CartWidget = () => {
     return(
-        <div className='w-12 flex justify-end items-center gap-1 lg:w-24'>
-            <img src={cartEmptyImg} alt="cart-empty" className='w-8'/>
-            <p>0</p>
+        <div className='w-14 h-10 flex justify-center items-center gap-1.5 bg-violet-700 rounded-xl'>
+            <img src={cartEmptyImg} alt="cart-empty" className='w-6'/>
+            <p className='text-white'>0</p>
         </div>
     )
 }
