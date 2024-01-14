@@ -64,16 +64,19 @@ const Checkout = () => {
     }
 
     if (loading) {
-        return <h1>Generando orden...</h1>
+        return <h1 className='mt-10 text-violet-600 text-center '>Generando orden...</h1>
     };
 
     if (orderId) {
-        return <h1>El id de su orden es: {orderId} </h1>
+        return <div className='flex justify-center mt-10'>
+            <h1 className='bg-slate-100 p-10 rounded-2xl shadow-lg'>El id de su orden es: {orderId} </h1>
+        </div>
     };
 
     return (
         <div className='mt-10 '>
-            <h1 className='mb-4 text-center font-bold text-violet-600 text-xl'>CHECKOUT</h1>
+            <h1 className='mb-2 text-center font-bold text-violet-600 text-xl'>CONTACTO</h1>
+            <p className='mb-4 text-center'>Completá el formulario para finalizar tu pedido</p>
             <CheckoutForm onConfirm={createOrder} />
         </div>
     );

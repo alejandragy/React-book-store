@@ -16,7 +16,7 @@ const CheckoutForm = ({onConfirm}) => {
 
     return (
         <div className="flex justify-center">
-            <form onSubmit={handleConfirm} className="flex flex-col gap-2 w-80 ">
+            <form onSubmit={handleConfirm} className="flex flex-col gap-2 w-80 bg-slate-100 p-10 rounded-2xl shadow-lg">
                 <label className="pl-2">Nombre</label>
                 <input className="mb-4 border-2 border-slate-100 rounded-2xl h-10 p-2" 
                     type="text" value={name} onChange={({target})=> setName(target.value)} />
