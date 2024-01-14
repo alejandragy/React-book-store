@@ -13,7 +13,7 @@ const NavBar = () => {
             </Link>
             <div className='flex lg:w-10/12 h-14 pl-6 pr-6 items-center justify-between'>
                 <div className='hidden lg:flex gap-10 items-center'>
-                    <NavLink to={`/category/Ciencias`} className={({ isActive }) => isActive ? 'text-black' : 'text-white'}>Ciencias</NavLink>
+                    <NavLink to={`/category/Ciencia`} className={({ isActive }) => isActive ? 'text-black' : 'text-white'}>Ciencia</NavLink>
                     <NavLink to={`/category/Filosofía`} className={({ isActive }) => isActive ? 'text-black' : 'text-white'}>Filosofía</NavLink>
                     <NavLink to={`/category/Narrativa`} className={({ isActive }) => isActive ? 'text-black' : 'text-white'}>Narrativa</NavLink>
                     <NavLink to={`/category/Poesía`} className={({ isActive }) => isActive ? 'text-black' : 'text-white'}>Poesía</NavLink>
