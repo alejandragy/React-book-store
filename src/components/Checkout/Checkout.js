@@ -64,19 +64,22 @@ const Checkout = () => {
     }
 
     if (loading) {
-        return <h1 className='mt-10 text-violet-600 text-center '>Generando orden...</h1>
+        return (<div>
+            <div className="flex justify-center items-ceter h-[500px] w-80 mt-10 p-6 pb-10 rounded-2xl bg-violet-600 shadow-lg">
+                <p className='text-white'>Generando orden...</p>
+            </div>
+        </div>)
     };
 
     if (orderId) {
-        return <div className='flex justify-center mt-10'>
-            <h1 className='bg-slate-100 p-10 rounded-2xl shadow-lg'>El id de su orden es: {orderId} </h1>
+        return <div className=" flex flex-col gap-10  items-center h-[500px] w-80 mt-10 p-6 pb-10 rounded-2xl bg-violet-600 shadow-lg text-white">
+        <p className='font-bold'>ORDEN #{orderId} </p>
+        <p>Compra finalizada exitosamente!</p>    
         </div>
     };
 
     return (
-        <div className='mt-10 '>
-            <h1 className='mb-2 text-center font-bold text-violet-600 text-xl'>CONTACTO</h1>
-            <p className='mb-4 text-center'>Completá el formulario para finalizar tu pedido</p>
+        <div className='mt-10'>
             <CheckoutForm onConfirm={createOrder} />
         </div>
     );
