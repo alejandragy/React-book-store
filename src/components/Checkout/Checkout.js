@@ -4,6 +4,7 @@ import { Timestamp, collection, getDocs, writeBatch, query, where, documentId, a
 import { db } from '../../services/firebase/firebaseConfig';
 
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
+import './Checkout.css';
 
 
 
@@ -65,16 +66,16 @@ const Checkout = () => {
 
     if (loading) {
         return (<div>
-            <div className="flex justify-center items-ceter h-[500px] w-80 mt-10 p-6 pb-10 rounded-2xl bg-violet-600 shadow-lg">
-                <p className='text-white'>Generando orden...</p>
+            <div className="flex justify-center items-center h-[500px] w-80 mt-10 p-6 pb-10 rounded-2xl bg-slate-100 shadow-lg">
+                <div className='loader'></div>
             </div>
         </div>)
     };
 
     if (orderId) {
-        return <div className=" flex flex-col gap-10  items-center h-[500px] w-80 mt-10 p-6 pb-10 rounded-2xl bg-violet-600 shadow-lg text-white">
-        <p className='font-bold'>ORDEN #{orderId} </p>
-        <p>Compra finalizada exitosamente!</p>    
+        return <div className=" flex flex-col justify-center items-center gap-10  items-center h-[500px] w-80 mt-10 p-6 pb-10 rounded-2xl bg-slate-100 shadow-lg">
+            <p>Orden creada exitosamente!</p>
+            <p className='text-violet-600 font-bold'>ORDEN #{orderId} </p>
         </div>
     };
 
