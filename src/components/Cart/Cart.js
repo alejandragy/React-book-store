@@ -27,7 +27,7 @@ const Cart = () => {
 
     return (
         <div className='flex justify-center gap-10 flex-wrap'>
-            <div className='flex-col items-center gap-8 mt-10 h-[500px] overflow-y-scroll'>
+            <div className='flex-col items-center gap-8 mt-10 h-[450px] overflow-y-scroll'>
                 {cart.map(p => <CartItem key={p.id} {...p} />)}
             </div>
 

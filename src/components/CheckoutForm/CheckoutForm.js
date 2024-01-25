@@ -22,8 +22,8 @@ const CheckoutForm = ({ onConfirm }) => {
     return (
         <div className=''>
             <form onSubmit={handleConfirm}>
-                <div className='flex flex-col gap-2 w-80 p-6 pb-10 rounded-t-2xl bg-slate-100 shadow-lg'>
-                    <h3 className='text-violet-600 font-bold mb-16 pl-2 '>NUEVA ORDEN</h3>
+            <h3 className='h-10 bg-violet-600 text-white font-bold pt-2 rounded-t-2xl text-center'>NUEVA ORDEN</h3>
+                <div className='flex flex-col gap-2 w-80 p-6 pb-10 bg-slate-100 shadow-lg'>
                     <label className='pl-2'>Nombre</label>
                     <input className='mb-4 rounded-xl h-10 p-3 bg-slate-200 focus:outline-none'
                         type="text" value={name} onChange={({ target }) => setName(target.value)} />
