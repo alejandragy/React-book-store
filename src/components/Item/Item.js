@@ -23,7 +23,7 @@ const Item = ({ id, title, img, price, stock }) => {
                 <img src={img} alt={title} className="w-full h-80" />
             </picture>
             <header className="p-2">
-                <h2 className="h-12 text-md text-gray-700">{title}</h2>
+                <h2 className="h-8 text-md text-gray-700 truncate">{title}</h2>
             </header>
             <section className="pl-2">
                 <p className="text-xl font-bold">${price}</p>
