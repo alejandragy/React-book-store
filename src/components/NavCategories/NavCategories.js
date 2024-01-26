@@ -9,8 +9,8 @@ const NavCategories = ({ }) => {
 
     return (
         <div className=''>
-            <button onClick={() => expanded === 0 ? setExpanded(1) : setExpanded(0)} className='text-white'>Libros</button>
-            <div className= {isExpanded ? 'w-full left-0 absolute mt-4 flex flex-col bg-violet-600 bg-opacity-80 gap-10 px-10 pb-6' : 'hidden'}>
+            <button onClick={() => { if(expanded === 0) {setExpanded(1)}}} className='text-white'>Libros</button>
+            <div onMouseLeave={() => { if(expanded === 1) {setExpanded(0)}}} className= {isExpanded ? 'w-full left-0 absolute mt-4 flex flex-col bg-violet-600 bg-opacity-80 gap-10 px-10 pb-6' : 'hidden'}>
                     <div className='flex flex-wrap w-full items-center gap-10 mt-3 '>
                     <NavLink to={`/category/Arte`} className={({ isActive }) => isActive ? 'text-white font-bold' : 'text-white'}>Arte</NavLink>
                     <NavLink to={`/category/Ciencia`} className={({ isActive }) => isActive ? 'text-white font-bold' : 'text-white'}>Ciencia</NavLink>
