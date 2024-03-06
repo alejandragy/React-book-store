@@ -4,7 +4,7 @@ import bookStoreLogo from './img/book-store-logo.png';
 
 import { NavLink, Link } from 'react-router-dom';
 import { ProductContext } from '../../context/ProductContext';
-import { useContext, useState, useEffect } from 'react';
+import { useContext } from 'react';
 
 
 
@@ -22,7 +22,7 @@ const NavCategories = () => {
     return (
         <div className='w-full flex flex-col bg-violet-800 shadow-2xl md:w-64'>
             <Link to='/' className='py-6 px-6 bg-white' onClick={clearRandomProduct}><img src={bookStoreLogo} alt='logo' className='h-6' /></Link>
-            <div className='px-6 py-8 flex flex-col text-lg bg-violet-800 text-white'>
+            <div className='h-screen px-6 py-8 flex flex-col text-lg bg-violet-800 text-white'>
                 <Link to='/' onClick={handleRandomBookClick} className='flex items-center gap-x-1 rounded-xl  bg-violet-200 bg-opacity-30 hover:scale-105'> <img src={varita} className='w-10'></img> Libro random</Link>
                 <div className='mt-4 flex items-center gap-x-1 '> <img src={libros} className='w-10'></img> <p>Categorías</p></div>
                 <div className=' mt- 2 flex flex-col pl-12 gap-y-3'>

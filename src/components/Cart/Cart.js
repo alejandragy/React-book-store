@@ -22,8 +22,8 @@ const Cart = () => {
                 </div>
             </div>
 
-        );
-    };
+        )
+    }
 
     return (
         <div className='w-full p-10 justify-center gap-10 flex-wrap'>
@@ -36,7 +36,7 @@ const Cart = () => {
                 <button onClick={() => clearCart()} className='mt-2 text-gray-500'>vaciar carrito</button>
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default Cart;

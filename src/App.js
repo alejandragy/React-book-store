@@ -1,15 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
-import { useState } from 'react';
+import { ProductProvider } from './context/ProductContext';
 
-import NavBar from './components/NavBar/NavBar';
 import NavCategories from './components/NavCategories/NavCategories';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetatilContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import Cart from './components/Cart/Cart'
 import Checkout from './components/Checkout/Checkout';
 import CartWidget from './components/CartWidget/CartWidget';
-import { ProductProvider } from './context/ProductContext';
+
 
 
 
@@ -37,7 +36,7 @@ function App() {
         </CartProvider>
       </BrowserRouter>
     </div>
-  );
+  )
 }
 
 export default App;
