@@ -18,7 +18,7 @@ const Item = ({ id, title, img, price, stock }) => {
     }
 
     return (
-        <article className="w-64 shadow-lg p-4 border-b-4 border-violet-600">
+        <article className="w-64 shadow-lg p-4 border-b-4 border-violet-600 ">
             <picture>
                 <img src={img} alt={title} className="w-full h-80" />
             </picture>

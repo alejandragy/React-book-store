@@ -10,7 +10,7 @@ const Cart = () => {
 
     if (totalQuantity === 0) {
         return (
-            <div className='flex justify-center gap-10 flex-wrap'>
+            <div className='w-full p-10 justify-center gap-10 flex-wrap'>
                 <div className='mt-10 gap-8 flex flex-col items-center'>
                     <h1>No hay items en el carrito</h1>
                     <Link to='/' className='w-80 p-2 pl-6 pr-6 bg-violet-600 text-white text-center rounded-xl text-sm'>VER PRODUCTOS</Link>
@@ -26,8 +26,8 @@ const Cart = () => {
     };
 
     return (
-        <div className='flex justify-center gap-10 flex-wrap'>
-            <div className='flex-col items-center gap-8 mt-10 h-[450px] overflow-y-scroll'>
+        <div className='w-full p-10 justify-center gap-10 flex-wrap'>
+            <div className='flex-col items-center gap-8 mt-10 max-h-[450px] overflow-y-scroll'>
                 {cart.map(p => <CartItem key={p.id} {...p} />)}
             </div>
 

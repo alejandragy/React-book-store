@@ -22,7 +22,7 @@ const CheckoutForm = ({ onConfirm }) => {
     return (
         <div className=''>
             <form onSubmit={handleConfirm}>
-            <h3 className='h-10 bg-violet-600 text-white font-bold pt-2 rounded-t-2xl text-center'>NUEVA ORDEN</h3>
+            <h3 className='h-10 bg-violet-600 text-white font-bold pt-2  text-center'>NUEVA ORDEN</h3>
                 <div className='flex flex-col gap-2 w-80 p-6 pb-10 bg-slate-100 shadow-lg'>
                     <label className='pl-2'>Nombre</label>
                     <input className='mb-4 rounded-xl h-10 p-3 bg-slate-200 focus:outline-none'
@@ -38,7 +38,7 @@ const CheckoutForm = ({ onConfirm }) => {
                         type="text" value={email} onChange={({ target }) => setEmail(target.value)} />
                 </div>
 
-                <div className=" h-16 flex items-center justify-center gap-8 bg-violet-600 rounded-b-2xl text-white font-bold">
+                <div className=" h-16 flex items-center justify-center gap-8 bg-violet-600 text-white font-bold">
                     <p>${total}</p>
                     <button type="submit" className="p-2 pl-6 pr-6 text-sm">GENERAR ORDEN</button>
                 </div>

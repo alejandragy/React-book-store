@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Timestamp, collection, getDocs, writeBatch, query, where, documentId, addDoc } from 'firebase/firestore';
-import { db } from '../../services/firebase/firebaseConfig';
+import { db } from '../../firebaseConfig';
 
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
 import './Checkout.css';
@@ -65,7 +65,7 @@ const Checkout = () => {
     }
 
     if (loading) {
-        return (<div>
+        return (<div className=''>
             <div className="flex justify-center items-center h-[500px] w-80 mt-10 p-6 pb-10 rounded-2xl bg-slate-100 shadow-lg">
                 <div className='loader'></div>
             </div>
@@ -73,7 +73,7 @@ const Checkout = () => {
     };
 
     if (orderId) {
-        return <div className=" flex flex-col justify-center items-center gap-10  items-center h-[500px] w-80 mt-10 p-6 pb-10 rounded-2xl bg-slate-100 shadow-lg">
+        return <div className="flex flex-col justify-center items-center gap-10  h-[500px] mt-10 p-6 pb-10 rounded-2xl bg-slate-100 shadow-lg">
             <p>Orden creada exitosamente!</p>
             <p className='text-violet-600 font-bold'>ORDEN #{orderId} </p>
         </div>

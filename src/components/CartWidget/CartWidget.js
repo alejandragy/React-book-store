@@ -9,7 +9,7 @@ const CartWidget = () => {
     const { totalQuantity } = useContext(CartContext);
 
     return (
-        <Link to='/cart' className='w-14 h-10 flex justify-center items-center gap-1.5 bg-violet-700 rounded-xl'>
+        <Link to='/cart' className='fixed right-2 mt-2 w-14 h-10 flex justify-center items-center gap-1.5 bg-violet-700 rounded-xl'>
             <img src={ totalQuantity > 0? cartBooksImg : cartEmptyImg } alt="cart" className='w-6' />
             <p className='text-white'>{totalQuantity}</p>
         </Link>
