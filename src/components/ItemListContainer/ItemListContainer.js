@@ -36,7 +36,7 @@ const ItemListContainer = ({ }) => {
     }, [categoryId, randomProduct, getProductsByCategory])
 
     return (
-        <div className="w-full h-screen bg-gray-100">
+        <div className="w-full min-h-screen bg-gray-100">
             <ItemList products={displayedProducts} />
         </div>
     )
