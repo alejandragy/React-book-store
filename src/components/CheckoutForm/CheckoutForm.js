@@ -33,11 +33,11 @@ const CheckoutForm = ({ onConfirm }) => {
 
                         <label className=''>Teléfono</label>
                         <input className='mb-10 h-8 border-b-2 border-gray-200 focus:outline-none md:w-80'
-                            type="text" value={phone} onChange={({ target }) => setName(target.value)} />
+                            type="text" value={phone} onChange={({ target }) => setPhone(target.value)} />
 
                         <label className=''>Email</label>
                         <input className='mb-10 h-8 border-b-2 border-gray-200 focus:outline-none md:w-80'
-                            type="text" value={email} onChange={({ target }) => setName(target.value)} />
+                            type="text" value={email} onChange={({ target }) => setEmail(target.value)} />
                     </div>
 
                 </div>
