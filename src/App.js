@@ -16,7 +16,7 @@ import CartWidget from './components/CartWidget/CartWidget';
 function App() {
 
   return (
-    <div className=''>
+    <div className='font-karla'>
       <BrowserRouter>
         <CartProvider>
           <ProductProvider>

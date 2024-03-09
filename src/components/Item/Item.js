@@ -18,19 +18,19 @@ const Item = ({ id, title, img, price, stock }) => {
     }
 
     return (
-        <article className="w-64 shadow-lg p-4 border-b-4 border-violet-600 ">
-            <picture>
-                <img src={img} alt={title} className="w-full h-80" />
-            </picture>
-            <header className="p-2">
-                <h2 className="h-8 text-md text-gray-700 truncate">{title}</h2>
+        <article className="w-64 shadow-xl rounded-2xl bg-white ">
+            <div className="h-80 px-4 pt-4 overflow-hidden">
+                <img src={img} alt={title} className="w-full h-full border-b-2 border-t-2 border-violet-100" />
+            </div>
+            <header className="p-4">
+                <h2 className="text-lg text-md text-gray-700 truncate">{title}</h2>
             </header>
-            <section className="pl-2">
+            <section className="pl-4">
                 <p className="text-xl font-bold">${price}</p>
             </section>
-            <footer className="flex mt-6 mb-2 justify-center gap-4 ">
-                <Link to={`/item/${id}`} className="p-2 pl-6 pr-6 bg-slate-100 rounded-2xl text-sm">DETALLES</Link>
-                <Link to={'/cart'} className="p-2 pl-6 pr-6 bg-violet-600 text-white rounded-2xl text-sm" onClick={addSingleProduct}>COMPRAR</Link>
+            <footer className="flex mt-2 mb-2 p-4 justify-center gap-5 ">
+                <Link to={`/item/${id}`} className="p-1.5 px-4 bg-slate-100 rounded-2xl text-sm font-bold">DETALLES</Link>
+                <Link to={'/cart'} className="p-1.5 px-4 bg-violet-600 text-white rounded-2xl text-sm font-bold hover:scale-105" onClick={addSingleProduct}>COMPRAR</Link>
             </footer>
         </article>
     )

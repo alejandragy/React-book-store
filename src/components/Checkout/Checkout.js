@@ -3,6 +3,8 @@ import { CartContext } from '../../context/CartContext';
 import { Timestamp, collection, getDocs, writeBatch, query, where, documentId, addDoc } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 
+import compra from './img/bolsa-de-la-compra.png';
+
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
 import './Checkout.css';
 
@@ -65,22 +67,23 @@ const Checkout = () => {
     }
 
     if (loading) {
-        return (<div className=''>
-            <div className="flex justify-center items-center h-[500px] w-80 mt-10 p-6 pb-10 rounded-2xl bg-slate-100 shadow-lg">
+        return (<div className='bg-gray-100'>
+            <div className="flex justify-center items-center h-[500px] bg-white">
                 <div className='loader'></div>
             </div>
         </div>)
     };
 
     if (orderId) {
-        return <div className="flex flex-col justify-center items-center gap-10  h-[500px] mt-10 p-6 pb-10 rounded-2xl bg-slate-100 shadow-lg">
+        return <div className="bg-white flex flex-col justify-center items-center gap-10  h-[500px] mt-10 p-6 pb-10 shadow-lg">
             <p>Orden creada exitosamente!</p>
+            <img src={compra} className='w-20'/>
             <p className='text-violet-600 font-bold'>ORDEN #{orderId} </p>
         </div>
     };
 
     return (
-        <div className='mt-10'>
+        <div className='bg-gray-100'>
             <CheckoutForm onConfirm={createOrder} />
         </div>
     );

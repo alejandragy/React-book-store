@@ -22,24 +22,27 @@ const CheckoutForm = ({ onConfirm }) => {
     return (
         <div className=''>
             <form onSubmit={handleConfirm}>
-            <h3 className='h-10 bg-violet-600 text-white font-bold pt-2  text-center'>NUEVA ORDEN</h3>
-                <div className='flex flex-col gap-2 w-80 p-6 pb-10 bg-slate-100 shadow-lg'>
-                    <label className='pl-2'>Nombre</label>
-                    <input className='mb-4 rounded-xl h-10 p-3 bg-slate-200 focus:outline-none'
-                        type="text" value={name} onChange={({ target }) => setName(target.value)} />
+                <div className='flex flex-col p-10 bg-white shadow-lg border-t-2 border-violet-600 md:flex-row'>
+                    <div className="md:w-3/6">
+                        <p className="text-violet-600 font-bold text-xl">TOTAL ${total} </p>
+                    </div>
+                    <div className="md:w-3/6 flex flex-col">
+                        <label className=''>Nombre</label>
+                        <input className='mb-10 h-8 border-b-2 border-gray-200 focus:outline-none md:w-80'
+                            type="text" value={name} onChange={({ target }) => setName(target.value)} />
 
-                    <label className='pl-2'>Teléfono</label>
-                    <input className='mb-4 rounded-xl h-10 p-3 bg-slate-200 focus:outline-none'
-                        type="text" value={phone} onChange={({ target }) => setPhone(target.value)} />
+                        <label className=''>Teléfono</label>
+                        <input className='mb-10 h-8 border-b-2 border-gray-200 focus:outline-none md:w-80'
+                            type="text" value={phone} onChange={({ target }) => setName(target.value)} />
 
-                    <label className='pl-2'>Email</label>
-                    <input
-                        className='mb-4 rounded-xl h-10 p-3 bg-slate-200 focus:outline-none'
-                        type="text" value={email} onChange={({ target }) => setEmail(target.value)} />
+                        <label className=''>Email</label>
+                        <input className='mb-10 h-8 border-b-2 border-gray-200 focus:outline-none md:w-80'
+                            type="text" value={email} onChange={({ target }) => setName(target.value)} />
+                    </div>
+
                 </div>
 
                 <div className=" h-16 flex items-center justify-center gap-8 bg-violet-600 text-white font-bold">
-                    <p>${total}</p>
                     <button type="submit" className="p-2 pl-6 pr-6 text-sm">GENERAR ORDEN</button>
                 </div>
             </form>
