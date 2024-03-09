@@ -21,7 +21,7 @@ const ItemDetail = ({ id, title, img, category, author, description, price, stoc
     };
 
     return (
-        <article className='h-500 mt-10 mx-2 bg-white flex flex-nowrap justify-between gap-4'>
+        <article className='h-500 mt-10 mx-2 bg-white flex flex-nowrap justify-between gap-4 lg:mx-20'>
             <div className='flex items-center'>
                 <img src={img} alt={title} className='h-500' />
             </div>
