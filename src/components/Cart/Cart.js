@@ -26,7 +26,7 @@ const Cart = () => {
     }
 
     return (
-        <div className=' w-full p-10 justify-center gap-10 flex-wrap'>
+        <div className=' w-full min-h-screen p-10 justify-center gap-10 flex-wrap'>
             <div className='mb-4 flex-col items-center gap-8 max-h-[450px] overflow-y-scroll'>
                 {cart.map(p => <CartItem key={p.id} {...p} />)}
             </div>
