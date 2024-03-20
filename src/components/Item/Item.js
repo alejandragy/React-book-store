@@ -18,9 +18,9 @@ const Item = ({ id, title, img, price, stock }) => {
     }
 
     return (
-        <article className="w-64 shadow-xl rounded-2xl bg-white ">
+        <article className="w-60 shadow-xl  bg-white  ">
             <div className="h-80 px-4 pt-4 overflow-hidden">
-                <img src={img} alt={title} className="w-full h-full border-b-2 border-t-2 border-violet-100" />
+                <img src={img} alt={title} className="w-full h-full border-b-2 border-violet-100" />
             </div>
             <header className="p-4">
                 <h2 className="text-lg text-md text-gray-700 truncate">{title}</h2>
@@ -30,7 +30,7 @@ const Item = ({ id, title, img, price, stock }) => {
             </section>
             <footer className="flex mt-2 mb-2 p-4 justify-center gap-5 ">
                 <Link to={`/item/${id}`} className="p-1.5 px-4 bg-slate-100 rounded-2xl text-sm font-bold">DETALLES</Link>
-                <Link to={'/cart'} className="p-1.5 px-4 bg-violet-600 text-white rounded-2xl text-sm font-bold hover:scale-105" onClick={addSingleProduct}>COMPRAR</Link>
+                <Link to={'/cart'} className="p-1.5 px-4 bg-violet-600 text-white rounded-2xl text-sm font-bold transition-transform duration-500 ease-in-out transform  hover:scale-105" onClick={addSingleProduct}>COMPRAR</Link>
             </footer>
         </article>
     )
